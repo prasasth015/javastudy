@@ -13,7 +13,11 @@ public class StreamFilter1 {
         result=name.stream().filter(str->str.length()>6 && str.length()<8).collect(Collectors.toList());
         System.out.println(result);
 
+        //OR
+        name.stream().filter(str->str.length()>6 && str.length()<8).forEach(str-> System.out.println(str);
+
         //without using result variable
         name.stream().filter(str->str.length()>6 && str.length()<8).forEach(System.out::println);
+
     }
 }
