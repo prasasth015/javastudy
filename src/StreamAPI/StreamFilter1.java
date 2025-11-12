@@ -10,14 +10,14 @@ public class StreamFilter1 {
     public static void main(String[] args) {
         List<String> name= Arrays.asList("Jonathan","Mayerss","Phillipe");
         List<String> result=new ArrayList<>();
-        result=name.stream().filter(str->str.length()>6 && str.length()<8).collect(Collectors.toList());
+        result=name.stream().filter(str-> str.length() == 7).collect(Collectors.toList());
         System.out.println(result);
 
         //OR
-        name.stream().filter(str->str.length()>6 && str.length()<8).forEach(str-> System.out.println(str));
+        name.stream().filter(str-> str.length() == 7).forEach(str-> System.out.println(str));
 
         //without using result variable
-        name.stream().filter(str->str.length()>6 && str.length()<8).forEach(System.out::println);
+        name.stream().filter(str-> str.length() == 7).forEach(System.out::println);
 
     }
 }
